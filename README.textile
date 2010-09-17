@@ -1,4 +1,4 @@
-h1. Rails 3, Mongoid,  Carrierwave, and Uploadify
+h1. Rails 3, Mongoid,  Carrierwave, Uploadify, and Devise
 
 This is a demonstration application using:
 
@@ -6,6 +6,7 @@ This is a demonstration application using:
 * Mongoid — A MongoDB mapper for Rails
 * Carrierwave — Upload and attach files to Rails models
 * Uploadify — Flash based multi-file uploader
+* Devise - Rack based authentication
 
 Other depedencies:
 
@@ -40,6 +41,13 @@ h3. Mongoid
 "http://mongoid.org/":http://mongoid.org/
 
 Mongoid is an excellent (and we think the best) ORM for MongoDB. It enables embedded documents as well as ActiveRecord style associations (called references). The documentation is good and is actively developed. It does not interfere with ActiveRecord so projects can use both in parallel.
+
+
+h3. Devise
+
+"http://github.com/plataformatec/devise":http://github.com/plataformatec/devise
+
+Authentication system using Warden rack middleware. Integrates with Mongoid. Base project has authentication disabled. *To enable authentication, uncomment "before_filter :authenticate_user!" in application_controller.rb*
 
 
 h3. jQuery
