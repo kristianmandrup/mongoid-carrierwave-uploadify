@@ -30,5 +30,8 @@ MongoidCarrierwaveUploadify::Application.configure do
     g.template_engine :haml
     g.test_framework  :rspec, :fixture => false, :views => false
   end
+
+  # devise
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
 
