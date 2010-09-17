@@ -1,4 +1,7 @@
 MongoidCarrierwaveUploadify::Application.routes.draw do
+
+  devise_for :users
+
   resources :stories do
     resources :photos do
       collection do
