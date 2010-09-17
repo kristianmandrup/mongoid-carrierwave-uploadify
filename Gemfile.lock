@@ -77,7 +77,7 @@ GEM
       subexec (~> 0.0.4)
     mongo (1.0.7)
       bson (>= 1.0.4)
-    mongoid (2.0.0.beta.17)
+    mongoid (2.0.0.beta.18)
       activemodel (~> 3.0.0)
       bson (= 1.0.4)
       mongo (= 1.0.7)
@@ -156,7 +156,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   mini_magick
-  mongoid (= 2.0.0.beta.17)
+  mongoid (= 2.0.0.beta.18)
   mongrel
   rails (= 3.0.0)
   remarkable_mongoid
