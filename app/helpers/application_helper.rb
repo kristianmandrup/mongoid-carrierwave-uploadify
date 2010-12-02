@@ -20,11 +20,10 @@ module ApplicationHelper
 
 
     cs = controller_name.singularize
+    script_path = controller.send(cs+ "_photos_path", instance_variable_get("@#{cs}") )
     if (has =="many")
-      script_path = controller.send(cs+ "_photos_path", instance_variable_get("@#{cs}") )
       multi = "true"
     else
-      script_path = "/" + controller_name + "/" + instance_variable_get("@#{cs}").id.to_s + "/photos"
       multi = "false"
     end
 
