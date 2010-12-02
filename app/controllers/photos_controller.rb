@@ -13,7 +13,6 @@ class PhotosController < ApplicationController
   end
 
   def edit
-    puts @parent.to_s + @photo.to_s
   end
 
   def create
@@ -73,10 +72,13 @@ private
     # these have many photos
     if !params[:story_id].blank? or !params[:product_id].blank?
     @photo = params[:id] ? @parent.photos.find(params[:id]) : @parent.photos.build(params[:photo])
+      raise @photo.inspect
     end
     # these have many photos
     if !params[:company_id].blank?
-    @photo = @parent.photo ? @parent.photo : @parent.build_photo()
+      #raise params.inspect
+      @photo = @parent.photo ? @parent.photo : @parent.build_photo(params[:photo])
     end
   end
 end
+
