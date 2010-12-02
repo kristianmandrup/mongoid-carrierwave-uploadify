@@ -1,17 +1,16 @@
-%h1 Story
+%p
+  %b Name:
+  = @product.name
+%p
+  %b Price:
+  = @product.price
+%p
+  %b Description:
+  = @product.description
 
-= link_to 'Edit', :edit_story
+= link_to 'Edit', edit_product_path(@product)
 \|
-= link_to 'Back', :stories
-|
-= link_to 'Add photo', new_story_photo_path(@story)
-
-%p
-  %b Title:
-  = @story.title
-%p
-  %b Body:
-  = @story.body
+= link_to 'Back', products_path
 
 %p
   %i Note: Photos are sortable. Just drag and drop into new position
@@ -20,8 +19,8 @@
   .photos#sortable
     %h2 Photos
 
-    - @story.photos.forward.each do |photo|
-      = render :partial => "photos/photo", :locals => { :photo => photo, :parent=>@story }
+    - @product.photos.forward.each do |photo|
+      = render :partial => "photos/photo", :locals => { :photo => photo, :parent=>@product }
 
   .queue
     / This division is replaced with a flash button by Uploadify

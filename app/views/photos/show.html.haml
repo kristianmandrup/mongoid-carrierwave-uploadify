@@ -6,6 +6,6 @@
   = image_tag @photo.image.url if @photo.image.url
 
 %br
-= link_to 'Edit', edit_story_photo_path(@story, @photo)
+= link_to 'Edit',  send("edit_" + @parent.class.to_s.downcase + "_photo_path", @parent, @photo)
 \|
-= link_to 'Back', @story
+= link_to 'Back', @parent
