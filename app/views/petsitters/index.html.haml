@@ -1,0 +1,19 @@
+%h1 Listing petsitters
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @petsitters.each do |petsitter|
+    %tr
+      %td= petsitter.name
+      %td= link_to 'Show', petsitter
+      %td= link_to 'Edit', edit_petsitter_path(petsitter)
+      %td= link_to 'Destroy', petsitter, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Petsitter', new_petsitter_path

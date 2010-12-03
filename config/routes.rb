@@ -1,5 +1,12 @@
 MongoidCarrierwaveUploadify::Application.routes.draw do
 
+
+
+  resources :people do
+    resource :petsitter
+    resources :pets
+  end
+
   resources :products
 
   devise_for :users

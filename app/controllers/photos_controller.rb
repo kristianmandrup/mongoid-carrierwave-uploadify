@@ -54,8 +54,13 @@ class PhotosController < ApplicationController
     render :nothing => true
   end
 
+  def persisted?
+    false
+  end
 private
 
+
+  
   def find_parent
     if !params[:story_id].blank?
       @parent = Story.find(params[:story_id])
@@ -72,12 +77,13 @@ private
     # these have many photos
     if !params[:story_id].blank? or !params[:product_id].blank?
     @photo = params[:id] ? @parent.photos.find(params[:id]) : @parent.photos.build(params[:photo])
-      raise @photo.inspect
+      #raise @photo.inspect
     end
     # these have many photos
     if !params[:company_id].blank?
       #raise params.inspect
       @photo = @parent.photo ? @parent.photo : @parent.build_photo(params[:photo])
+ 
     end
   end
 end

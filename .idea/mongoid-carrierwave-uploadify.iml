@@ -133,18 +133,15 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-debug (v0.10.4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/ruby-debug-0.10.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] faker (v0.3.1, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/faker-0.3.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] haml-rails (v0.3.4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/haml-rails-0.3.4)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] devise (v1.1.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/devise-1.1.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] carrierwave (v0.5.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/carrierwave-0.5.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-rails (v2.2.1, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/rspec-rails-2.2.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mini_magick (v3.1, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/mini_magick-3.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] fabrication (v0.9.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/fabrication-0.9.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.24, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/haml-3.0.24)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] http_connection (v1.4.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/http_connection-1.4.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] bcrypt-ruby (v2.1.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/bcrypt-ruby-2.1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] ruby-debug-base (v0.10.4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/ruby-debug-base-0.10.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] columnize (v0.3.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/columnize-0.3.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] fastthread (v1.0.7, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/fastthread-1.0.7)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] warden (v0.10.7, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/warden-0.10.7)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] daemons (v1.1.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/daemons-1.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] uuidtools (v2.1.1, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/uuidtools-2.1.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] will_paginate (v3.0.pre2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/will_paginate-3.0.pre2)" level="application" />
@@ -161,32 +158,32 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/railties-3.0.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.0.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/actionmailer-3.0.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/activeresource-3.0.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bson_ext (v1.1.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/bson_ext-1.1.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bson_ext (v1.1.4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/bson_ext-1.1.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] devise (v1.1.5, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/devise-1.1.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] fabrication (v0.9.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/fabrication-0.9.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] warden (v1.0.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/warden-1.0.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mongo (v1.1.4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/mongo-1.1.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mongoid (v2.0.0.beta.20, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/mongoid-2.0.0.beta.20)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/rake-0.8.7)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] linecache (v0.43, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/linecache-0.43)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.6, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/arel-2.0.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] treetop (v1.4.9, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/treetop-1.4.9)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-test (v0.5.6, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/rack-test-0.5.6)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.5.20101130111154, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/arel-2.0.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] mime-types (v1.16, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/mime-types-1.16)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] remarkable (v4.0.0.alpha4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/remarkable-4.0.0.alpha4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/activesupport-3.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] builder (v2.1.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/builder-2.1.2)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.4.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/i18n-0.4.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.10, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/mail-2.2.10)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] erubis (v2.6.6, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/erubis-2.6.6)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.2.1, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/rack-1.2.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] abstract (v1.0.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/abstract-1.0.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] mail (v2.2.11, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/mail-2.2.11)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.5.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/i18n-0.5.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] polyglot (v0.3.1, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/polyglot-0.3.1)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.2.0, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/rspec-2.2.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rack-mount (v0.6.13, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/rack-mount-0.6.13)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/activemodel-3.0.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] bson_ext (v1.1.4, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/bson_ext-1.1.4)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] devise (v1.1.5, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/devise-1.1.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] fabrication (v0.9.3, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/fabrication-0.9.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.6, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/arel-2.0.6)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] warden (v1.0.2, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/warden-1.0.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jquery-rails (v0.2.6, /Users/jimmy/.rvm/gems/ree-1.8.7-2010.02/gems/jquery-rails-0.2.6)" level="application" />
   </component>
 </module>
 

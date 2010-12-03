@@ -9,8 +9,8 @@ class Photo
   field :orientation
   field :position, :type => Integer, :default => 0
   
-  embedded_in :story, :inverse_of => :photos
-  embedded_in :company, :inverse_of => :photo
+  embedded_in :photosable, :inverse_of => :photos
+  embedded_in :photoable, :inverse_of => :photo
 
   # CarrierWave
   mount_uploader :image, ImageUploader

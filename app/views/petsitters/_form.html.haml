@@ -1,0 +1,13 @@
+= form_for @petsitter do |f|
+  -if @petsitter.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@petsitter.errors.count, "error")} prohibited this petsitter from being saved:"
+      %ul
+        - @petsitter.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit 'Save'
