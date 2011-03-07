@@ -23,8 +23,8 @@ class Photo
 private
   def save_dimensions
     if image.path
-      self.width  = MiniMagick::Image.from_file(image.path)[:width]
-      self.height = MiniMagick::Image.from_file(image.path)[:height]
+      self.width  = MiniMagick::Image.open(image.path)[:width]
+      self.height = MiniMagick::Image.open(image.path)[:height]
     end
   end
 

@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'database_cleaner'
 require 'fabrication'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -32,12 +31,9 @@ RSpec.configure do |config|
   # instead of true.
   # config.use_transactional_fixtures = true
 
-  config.before(:suite) do
-    DatabaseCleaner.orm = "mongoid"
-    DatabaseCleaner.strategy = :truncation
-  end
-
   config.before(:each) do
-    DatabaseCleaner.clean
+    Mongoid.master.collections.select do |collection|
+      collection.name !~ /system/
+    end.each(&:drop)
   end
 end

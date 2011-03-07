@@ -6,17 +6,13 @@ require 'remarkable/mongoid'
 # any extras we add -- like saving dimensions.
 
 describe Photo do
-  before(:each) do
-    @story = Fabricate(:story)
-  end
+  before { @story = Fabricate(:story) }
 
   # Remarkable/mongoid macro
   it { should be_embedded_in(:story) }
 
   describe ".image" do
-    before(:each) do
-      MiniMagick::Image.stub!(:from_file).and_return(100)
-    end
+    before { stub_magick }
 
     it "should fail when no file is assigned" do
       @photo = @story.photos.build
@@ -31,9 +27,8 @@ describe Photo do
   end
 
   describe ".image dimensions" do
-    before(:each) do
-      MiniMagick::Image.should_receive(:from_file).
-                        exactly(2).and_return(:width => 640, :height => 480)
+    before do
+      stub_magick(640, 480)
       @photo = @story.photos.create :image_filename => "test.jpg"
     end
 
@@ -48,23 +43,21 @@ describe Photo do
 
   describe ".image orientation" do
     it "should save as landscape" do
-      MiniMagick::Image.should_receive(:from_file).
-                        exactly(2).and_return(:width => 640, :height => 480)
+      stub_magick(640, 480)
       @photo = @story.photos.create :image_filename => "test.jpg"
       @photo.orientation.should == "landscape"
     end
 
     it "should save as portrait" do
-      MiniMagick::Image.should_receive(:from_file).
-                        exactly(2).and_return(:width => 480, :height => 640)
+      stub_magick(480, 640)
       @photo = @story.photos.create :image_filename => "test.jpg"
       @photo.orientation.should == "portrait"
     end
   end
 
   describe "position" do
-    before(:each) do
-      MiniMagick::Image.stub!(:from_file).and_return(100)
+    before do
+      stub_magick
       @photo1 = @story.photos.create :image_filename => "image1.jpg"
       @photo2 = @story.photos.create :image_filename => "image2.jpg"
       @photo3 = @story.photos.create :image_filename => "image3.jpg"
@@ -76,4 +69,11 @@ describe Photo do
       @photo3.position.should == 3
     end
   end
+
+  private
+
+    def stub_magick(width=1280, height=960)
+      MiniMagick::Image.stub!(:open).and_return(:width => width, :height => height)
+    end
+
 end
