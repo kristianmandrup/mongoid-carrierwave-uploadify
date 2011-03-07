@@ -2,6 +2,7 @@ h1. Rails 3, Mongoid,  Carrierwave, Uploadify, and Devise
 
 This is a demonstration application using:
 
+* Ruby 1.9.2 — Best programming language
 * Rails 3.0 — Best web framework ever
 * Mongoid — A MongoDB mapper for Rails
 * Carrierwave — Upload and attach files to Rails models
@@ -28,6 +29,7 @@ JQuery plugin that uses SWFObject to easily select and upload multiple files. Se
 
 This project adds rack middleware to correctly pass session data into Rails as well as properly handle Javascript calls using respond_to. It also uses RJS to dynamically update the browser as each image is uploaded and a thumbnail is created.
 
+_*NOTE:*_ There is a Rack middleware located in lib/include that needs to be inserted into the Rails session chain. Take note of adding the directory that contains the middleware to your application.rb's autoload_paths. Also, look in config/initializers/session_store.rb to see how to insert the FlashSessionCookieMiddleware.
 
 h3. Carrierwave
 
