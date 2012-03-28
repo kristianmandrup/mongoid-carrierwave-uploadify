@@ -1,5 +1,7 @@
 %h1 New photo
+- if @parent.attribute_present?('photo')  ## photo not photos so you know its embeded as one
+  = render 'form_fix'
+- else
+  = render 'form'
 
-= render 'form'
-
-= link_to 'Back', @story
+= link_to 'Back', @parent

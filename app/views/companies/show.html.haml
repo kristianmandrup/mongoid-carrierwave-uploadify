@@ -1,0 +1,24 @@
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Founded:
+  = @company.founded
+
+%p
+  %b Logo:
+  %br
+  = @company.photo.title if !@company.photo.nil?
+  = image_tag(@company.photo.image.thumb.url) if !@company.photo.nil?
+
+
+  - if @company.photo
+    = link_to 'Change Logo',  edit_company_photo_path(@company, @company.photo)
+  - else
+    = link_to 'Add Logo',  new_company_photo_path(@company, @company.photo)
+    
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path
+

@@ -1,8 +1,11 @@
+- @parent = parent if @parent.blank? # from bathrooms the value comes as a local variable
+- parent_path = @parent.class.to_s.downcase
 .photo[photo]
   = photo.title
   %br
-  = link_to(image_tag(photo.image.thumb.url), [@story, photo]) if photo.image.thumb.url
+  = link_to(image_tag(photo.image.thumb.url), [@parent, photo]) if photo.image.thumb.url
   %br
-  = link_to 'edit', edit_story_photo_path(@story, photo)
+  = link_to 'edit',  send("edit_" + @parent.class.to_s.downcase + "_photo_path",@parent, photo)
   |
-  = link_to 'del', [@story, photo], :confirm => 'Are you sure?', :method => :delete
+  = link_to 'del', [@parent, photo], :confirm => 'Sind Sie sicher?', :method => :delete
+  // = self.superclass.class.to_s

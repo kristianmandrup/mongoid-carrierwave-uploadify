@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @petsitter.name
+
+= link_to 'Edit', edit_petsitter_path(@petsitter)
+\|
+= link_to 'Back', petsitters_path

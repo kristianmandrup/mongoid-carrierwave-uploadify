@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @person.name
+%p
+  %b Age:
+  = @person.age
+
+%p
+  %b Pets:
+  - for pet in @person.pets
+    =pet.name
+    %br
+= link_to 'Add Pets', new_person_pet_path(@story)
+= link_to 'Edit', edit_person_path(@person)
+\|
+= link_to 'Back', people_path

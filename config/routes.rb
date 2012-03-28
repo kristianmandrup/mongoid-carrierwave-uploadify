@@ -1,5 +1,14 @@
 MongoidCarrierwaveUploadify::Application.routes.draw do
 
+
+
+  resources :people do
+    resource :petsitter
+    resources :pets
+  end
+
+  resources :products
+
   devise_for :users
 
   resources :stories do
@@ -8,6 +17,18 @@ MongoidCarrierwaveUploadify::Application.routes.draw do
         post 'sort'
       end
     end
+  end
+
+  resources :products do
+    resources :photos do
+      collection do
+        post 'sort'
+      end
+    end
+  end
+
+  resources :companies do
+    resource :photo
   end
   root :to => 'stories#index'
 

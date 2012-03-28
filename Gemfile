@@ -1,19 +1,16 @@
-source 'http://rubygems.org'
+source :rubygems
 
-gem 'rails', '3.0.5'
-
-# MongoDB
-gem 'mongoid', '2.0.0.rc.7'
+gem 'rails'
+gem 'mongrel', '1.2.0.pre2'
+gem 'mongoid', '>= 2.0.0'
 gem 'bson_ext'
-
-# Template
 gem 'haml'
 
 # Authentication
 gem 'devise'
 
 # Carrierwave
-gem 'carrierwave'
+gem 'carrierwave-mongoid'
 gem 'mini_magick'
 gem 'fog'
 

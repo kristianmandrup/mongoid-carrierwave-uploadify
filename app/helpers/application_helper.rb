@@ -1,5 +1,7 @@
 module ApplicationHelper
-  def photo_uploadify
+
+
+  def photo_uploadify (has)
     # Putting the uploadify trigger script in the helper gives us
     # full access to the view and native rails objects without having
     # to set javascript variables.
@@ -13,26 +15,40 @@ module ApplicationHelper
     # ScriptData:
     #   Sets the http headers to accept javascript plus adds
     #   the session key and authenticity token for XSS protection.
-    #   The "FlashSessionCookieMiddleware" rack module deconstructs these 
+    #   The "FlashSessionCookieMiddleware" rack module deconstructs these
     #   parameters into something Rails will actually use.
+
+
+    cs = controller_name.singularize
+    script_path = controller.send(cs+ "_photos_path", instance_variable_get("@#{cs}") )
+    if (has =="many")
+      multi = "true"
+    else
+      multi = "false"
+    end
 
     session_key_name = Rails.application.config.session_options[:key]
     %Q{
 
     <script type='text/javascript'>
       $(document).ready(function() {
+
+
         $('#photo_upload').uploadify({
-          script          : '#{story_photos_path(@story)}',
+          script          : '#{script_path}',
           fileDataName    : 'photo[image]',
           uploader        : '/uploadify/uploadify.swf',
           cancelImg       : '/uploadify/cancel.png',
+          buttonImg       : '/images/pic-upload.png',
           fileDesc        : 'Images',
           fileExt         : '*.png;*.jpg;*.gif',
           sizeLimit       : #{10.megabytes},
           queueSizeLimit  : 24,
-          multi           : true,
+          width           : 196,
+          height          : 35,
+          multi           : #{multi},
           auto            : true,
-          buttonText      : 'ADD IMAGES',
+          buttonText      : 'Bilder hochladen',
           scriptData      : {
             '_http_accept': 'application/javascript',
             '#{session_key_name}' : encodeURIComponent('#{u(cookies[session_key_name])}'),
@@ -47,6 +63,8 @@ module ApplicationHelper
   end
 
   def photo_sortable
+    cs = controller_name.singularize
+    script_path=controller.send("sort_" + cs+ "_photos_path", instance_variable_get("@#{cs}") )
     %Q{
       <script type="text/javascript">
         $(document).ready(function() {
@@ -60,7 +78,7 @@ module ApplicationHelper
                 type: 'post',
                 data: $('#sortable').sortable('serialize') + '&authenticity_token=#{u(form_authenticity_token)}',
                 dataType: 'script',
-                url: '#{sort_story_photos_path(@story)}'})
+                url: '#{script_path}'})
               }
             });
           });

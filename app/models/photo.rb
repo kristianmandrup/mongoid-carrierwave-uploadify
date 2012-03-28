@@ -1,4 +1,4 @@
-require 'carrierwave/orm/mongoid'
+# require 'carrierwave/orm/mongoid'
 
 class Photo
   include Mongoid::Document
@@ -8,7 +8,9 @@ class Photo
   field :height, :type => Integer
   field :orientation
   field :position, :type => Integer, :default => 0
-  embedded_in :story, :inverse_of => :photos
+  
+  embedded_in :photosable, :inverse_of => :photos
+  embedded_in :photoable, :inverse_of => :photo
 
   # CarrierWave
   mount_uploader :image, ImageUploader
@@ -35,6 +37,6 @@ private
   end
 
   def save_position
-    self.position = (self._index + 1) if self.new_record?
+    # self.position = (self._index + 1) if self.new_record?
   end
 end
